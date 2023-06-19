@@ -29,7 +29,6 @@ public class Main {
 
 @override 
 
-package javatest1;
 //Base Class Car
 class Car {
  // Encapsulation: private variables and public methods
