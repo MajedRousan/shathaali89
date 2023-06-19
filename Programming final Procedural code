@@ -1,0 +1,82 @@
+
+import java.util.Scanner;
+ 
+
+public class Calculator {
+			
+			static double addMethod (double num1, double num2) //add method to variable num1 and num2
+			{
+				double add = num1 + num2; //  the equation equals num1 + num2
+				return add;
+			}
+			
+			static double subMethod (double num1, double num2)
+			{
+				double sub = num1 - num2; // the equation equals num1 - num2
+				return sub;
+			}
+			
+			static double multMethod (double num1, double num2)
+			{
+				double mul = num1 * num2; // the equation equals num1 * num2
+				return mul;
+			}
+
+			static double divMethod (double num1, double num2)
+			{
+				double div = num1 / num2; // the equation equals num1 / num2
+				return div;
+			}
+			
+			public static void main(String[] args) 
+			{
+				Scanner sc = new Scanner(System.in);
+				
+				  System.out.print("Enter first number: "); // users enters their first number 
+			        double num1 = sc.nextDouble();
+
+			        System.out.print("Enter second number: "); // user enters their second number 
+			        double num2 = sc.nextDouble();
+			        
+				
+				System.out.println(" press 1 for addition ");
+				
+				System.out.println(" press 2 for subtraction ");
+				
+				System.out.println(" press 3 for multiplication ");
+				
+				System.out.println(" press 4 for division  ");
+				
+				System.out.println("how do you want to solve this problem: "); // menu for the user to choose from
+
+				
+				int op = sc.nextInt(); 
+				
+				if(op == 1) // if Statement 
+				{
+					System.out.println("The addition is "+addMethod(num1, num2));
+				}
+				else if(op == 2)
+				{
+					System.out.println("The subtraction is "+subMethod(num1, num2));
+				}
+				else if(op == 3)
+				{
+					System.out.println("The multiplication is "+multMethod(num1, num2));
+				}
+				else if(op == 4)
+				{
+					System.out.println("The division is "+divMethod(num1, num2));
+				}
+				else // if the user entered the wrong input 
+				{
+					System.out.println("Invalid input, restart the program again.");
+				}
+				
+				
+				
+			}
+
+		
+	}
+
