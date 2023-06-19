@@ -1,4 +1,35 @@
 
+public class Main {
+	
+    public static void main(String[] args) {
+    	
+        Engine sportsEngine = new Engine(608);
+        
+        SportsCar sportsCar = new SportsCar("Porsche ", "918", 2020, sportsEngine);
+        
+        System.out.println("Make: " + sportsCar.getMake()); // which car company 
+        
+        System.out.println("Model: " + sportsCar.getModel()); // which model of the  car 
+        
+        System.out.println("Year: " + sportsCar.getYear()); // what year the car is made in
+        
+        System.out.println("Horsepower: " + sportsCar.getEngine().getHorsepower()); // the horsepower of the car
+
+        FamilyCar familyCar = new FamilyCar("jeep", "trackhawk", 2020, 5);
+        
+        System.out.println("Make: " + familyCar.getMake()); // which car company
+        
+        System.out.println("Model: " + familyCar.getModel()); // which model of the car 
+        
+        System.out.println("Year: " + familyCar.getYear()); // what year the car is made in
+        
+        System.out.println("Seats: " + familyCar.getSeats()); // how many seats are in the car 
+    }
+}
+
+@override 
+
+package javatest1;
 //Base Class Car
 class Car {
  // Encapsulation: private variables and public methods
@@ -39,70 +70,21 @@ class Car {
 
 //Composition: Engine Class
 class Engine {
- private int horsepower;
+ private int hp; // horsepower 
 
- public Engine(int horsepower) {
-     this.horsepower = horsepower;
+ public Engine(int hp) {
+     this.hp = hp;
  }
 
  public int getHorsepower() {
-     return horsepower;
+     return hp;
  }
 }
 
 
-@overdrive 
-
-
-public class Main {
+@override 
 	
-    public static void main(String[] args) {
-    	
-        Engine sportsEngine = new Engine(608);
-        
-        SportsCar sportsCar = new SportsCar("Porsche ", "918", 2020, sportsEngine);
-        
-        System.out.println("Make: " + sportsCar.getMake()); // which car company 
-        
-        System.out.println("Model: " + sportsCar.getModel()); // which model of the  car 
-        
-        System.out.println("Year: " + sportsCar.getYear()); // what year the car is made in
-        
-        System.out.println("Horsepower: " + sportsCar.getEngine().getHorsepower()); // the horsepower of the car
-
-        FamilyCar familyCar = new FamilyCar("jeep", "trackhawk", 2020, 5);
-        
-        System.out.println("Make: " + familyCar.getMake()); // which car company
-        
-        System.out.println("Model: " + familyCar.getModel()); // which model of the car 
-        
-        System.out.println("Year: " + familyCar.getYear()); // what year the car is made in
-        
-        System.out.println("Seats: " + familyCar.getSeats()); // how many seats are in the car 
-    }
-}
-
-@overdrive 
-
-
-//Inheritance: FamilyCar Class
-class FamilyCar extends Car {
- private int seats;
-
- public FamilyCar(String make, String model, int year, int seats) {
-     super(make, model, year);
-     this.seats = seats;
- }
-
- public int getSeats() {
-     return seats;
- }
-}
-
-@overdrive 
-
-	
-// Polymorphism : overriding 
+// Polymorphism: overriding 
 	class SportsCar extends Car {
 		
 		
@@ -123,9 +105,19 @@ class FamilyCar extends Car {
 	}
 
 
+ 
+ @override
 
+//Inheritance: FamilyCar Class
+class FamilyCar extends Car {
+ private int seats;
 
+ public FamilyCar(String make, String model, int year, int seats) {
+     super(make, model, year);
+     this.seats = seats;
+ }
 
-
-
-
+ public int getSeats() {
+     return seats;
+ }
+}
